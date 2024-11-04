@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import MailboxList from './components/MailboxList';
 import NavBar from './components/NavBar';
 
-const mailboxExample = [
+const mailboxOwners = [
  { _id: 1, boxSize: 'Small', boxholder: 'Alex'},
  { _id: 2, boxSize: 'Large', boxholder: 'Bob'},
  { _id: 3, boxSize: 'Medium', boxholder: 'Jackie'},
@@ -17,7 +17,7 @@ const mailboxExample = [
 ]
 
 const App = () => {
-  const [mailboxes, setMailboxes] = useState(mailboxExample)
+  const [mailboxes, setMailboxes] = useState(mailboxOwners)
   
   
   
@@ -29,7 +29,9 @@ const App = () => {
     <Routes>
     <Route path="/" element={<h2>Home Page</h2>} />
     <Route path="/mailboxes" element={<MailboxList mailboxes={mailboxes} />} />
-
+    
+    
+    <Route path='*' element={<h2>Lost in the Mail</h2>}/>
 
 
 
