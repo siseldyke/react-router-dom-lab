@@ -9,14 +9,14 @@ const MailboxDetails = (props) => {
     console.log('Mailbox Object:', singleMailbox)
     return (
       <>
-        <h2>Pokemon Details</h2>
+        <h2>Mailbox Details</h2>
         <dl>
           <h2>{singleMailbox.id}</h2>  
           
-          <dt>Weight:</dt>
-          <dd>{singleMailbox.boxsize}</dd>
-          <dt>Height:</dt>
-          <dd>{singleMailbox.boxholder}</dd>
+          <dt>Size:</dt>
+          <dd>{singleMailbox.boxSize}</dd>
+          <dt>Owner:</dt>
+          <dd>{singleMailbox.boxHolder}</dd>
         </dl>
       </>
     );

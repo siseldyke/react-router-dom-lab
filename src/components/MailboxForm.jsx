@@ -33,15 +33,15 @@ const MailboxForm = (props) => {
           type="text"
           id="Owner"
           name="Owner"
-          value={formData.name}
+          value={formData.boxHolder}
           onChange={handleChange}
         />
         <label htmlFor="Size">Size:</label>
         <input
           type="text"
           id="Size"
-          name="wSize"
-          value={formData.weight}
+          name="Size"
+          value={formData.boxSize}
           onChange={handleChange}
         />
         

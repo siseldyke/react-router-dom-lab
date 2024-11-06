@@ -10,7 +10,7 @@ const MailboxList = (props) => {
             <li key={currentMailbox.boxHolder}>
               <Link to={`/mailboxes/${currentMailbox._id}`}>
                 
-                {currentMailbox.boxSize}
+                {currentMailbox._id}
               </Link>
               
             </li>
