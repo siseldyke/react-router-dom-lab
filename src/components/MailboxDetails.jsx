@@ -2,17 +2,17 @@ import { useParams } from "react-router-dom";
 
 
 const MailboxDetails = (props) => {
-    console.log(props); // Always verify that any props are being passed correctly!
+    console.log(props); 
 
-    const {mailboxId } =useParams()
+    const {mailboxId} =useParams()
     const singleMailbox = props.mailboxes.find((mail) => mail._id === Number(mailboxId));
-    console.log('Mailbox Object:', singleMailbox)
+    console.log('Mailbox object' , singleMailbox)
     return (
       <>
         <h2>Mailbox Details</h2>
         <dl>
-          <h2>{singleMailbox.id}</h2>  
-          
+          <dt>box details</dt>  
+          <dd>{singleMailbox._id}</dd>
           <dt>Size:</dt>
           <dd>{singleMailbox.boxSize}</dd>
           <dt>Owner:</dt>
