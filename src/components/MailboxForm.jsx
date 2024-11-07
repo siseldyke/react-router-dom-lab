@@ -6,13 +6,13 @@ import { useNavigate } from 'react-router-dom';
 
 const MailboxForm = ({addMailbox}) => {
 
-    const [boxholder, setBoxholder] = useState('');
+    const [boxHolder, setBoxHolder] = useState('');
     const [boxSize, setBoxSize] = useState('Small');
     const navigate = useNavigate();
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      addMailbox({ boxholder, boxSize });
+      addMailbox({ boxHolder, boxSize });
       navigate('/mailboxes');
     };
 
@@ -28,8 +28,8 @@ const MailboxForm = ({addMailbox}) => {
         <label htmlFor="Owner">Owner Name:</label>
         <input
           type="text"
-          value={boxholder}
-          onChange={(e) => setBoxholder(e.target.value)}
+          value={boxHolder}
+          onChange={(e) => setBoxHolder(e.target.value)}
         />
         <label htmlFor="Size">Size:</label>
         <select value={boxSize} onChange={(e) => setBoxSize(e.target.value)}>
