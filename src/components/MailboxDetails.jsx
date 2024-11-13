@@ -6,12 +6,12 @@ const MailboxDetails = ({mailboxes}) => {
 
     const {mailboxId} =useParams()
     const singleMailbox = mailboxes.find((mail) => mail._id === Number(mailboxId));
-    console.log('Mailbox object' , singleMailbox)
+    if (singleMailbox)
     return (
       <>
         <h2>Mailbox Details</h2>
         <dl>
-          <dt>box details</dt>  
+          <dt>box details</dt>  ````````````````````````````````````````
           <dd>{singleMailbox._id}</dd>
           <dt>Size:</dt>
           <dd>{singleMailbox.boxSize}</dd>
@@ -20,6 +20,9 @@ const MailboxDetails = ({mailboxes}) => {
         </dl>
       </>
     );
+    else return(
+      <h1>Mailbox Not Found!</h1>
+    )
   };
   
   export default MailboxDetails;
